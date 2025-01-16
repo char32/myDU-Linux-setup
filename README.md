@@ -27,7 +27,7 @@ Now, if you are not logging in as root, add your user to the dockergroup
 ```
 sudo usermod -aG docker $USER
 ```
-and restart the shell or just reboot if that is easier for you.
+log out and back in to the shell or reboot if that is easier for you.
 
 
    
