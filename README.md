@@ -1,8 +1,8 @@
 # myDU-Linus-setup
 How to set up myDU server in a Linux Environment, assuming Ubuntu 24.04
 
-basic setup for Linux (Ubuntu 24.04):
 
+   
 Install Docker and add your user to the docker group
 ```
 # Add Docker's official GPG key:
@@ -19,12 +19,10 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 ```
-
 followed by
 ```
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
-
 Now, if you are not logging in as root, add your user to the dockergroup
 ```
 sudo usermod -aG docker $USER
@@ -32,6 +30,7 @@ sudo usermod -aG docker $USER
 and restart the shell or just reboot if that is easier for you.
 
 
+   
 Create the folder you want myDU settings to be installed into and enter it, for example
 ```
 mkdir mydu
@@ -44,7 +43,7 @@ Download the compose and script package:
 ```
 docker run --rm -it -v ./:/output novaquark/dual-server-fastinstall:latest
 ```
-
+   
 I'd advise to change the scripts to use "docker compose" instead of "docker-compose" as current docker version no longer uses/needs docker-compose and it may break python3:
 ```
 sed -i 's/docker-compose/docker compose/g' ./scripts/*
@@ -57,6 +56,7 @@ python3 scripts/config-set-domain.py config/dual.yaml http://[DOMAIN OR MY_IP] M
 ```
 
 
+   
 ----------------------------------------------------
 
 -- OPTIONAL - SET UP SSL --
