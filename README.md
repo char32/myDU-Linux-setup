@@ -1,4 +1,4 @@
-# myDU-Linus-setup
+# myDU-Linux-setup
 How to set up myDU server in a Linux Environment, assuming Ubuntu 24.04
 
 
