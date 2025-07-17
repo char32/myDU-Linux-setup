@@ -97,6 +97,11 @@ Reconfigure stack
 ./scripts/ssl.sh --config-nginx
 ```
 
+Right now (server version 1.5.5),set a specific version for the kafka docker verions in docker-compose.yml
+
+```
+image: confluentinc/cp-kafka:7.9.0
+```
 
 ------------------------------------
 
