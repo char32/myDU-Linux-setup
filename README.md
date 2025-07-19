@@ -55,8 +55,12 @@ cp ./config/dual.yaml ./config/dual.yaml.ori
 python3 scripts/config-set-domain.py config/dual.yaml http://[DOMAIN OR MY_IP] MY_IP
 ```
 
+Right now (server version 1.5.5),set a specific version for the kafka docker verions in docker-compose.yml
 
-   
+```
+image: confluentinc/cp-kafka:7.9.0
+```
+
 ----------------------------------------------------
 
 -- OPTIONAL - SET UP SSL --
@@ -95,12 +99,6 @@ Reconfigure stack
 ```
 ./scripts/ssl.sh --config-dual MY_IP
 ./scripts/ssl.sh --config-nginx
-```
-
-Right now (server version 1.5.5),set a specific version for the kafka docker verions in docker-compose.yml
-
-```
-image: confluentinc/cp-kafka:7.9.0
 ```
 
 ------------------------------------
