@@ -55,6 +55,9 @@ cp ./config/dual.yaml ./config/dual.yaml.ori
 python3 scripts/config-set-domain.py config/dual.yaml http://[DOMAIN OR MY_IP] MY_IP
 ```
 
+For unsecured external access you need to forward TCP ports 8081, 9210, 9630, 10000 and 10111 on the router and/or ion the server OS firewall
+
+
 Right now (server version 1.5.5),set a specific version for the kafka docker verions in docker-compose.yml
 
 ```
