@@ -104,6 +104,8 @@ Reconfigure stack
 ./scripts/ssl.sh --config-nginx
 ```
 
+For secured external access you need to forward TCP ports 9210 and 43 on the router and/or ion the server OS firewall
+
 ------------------------------------
 
 Start the stack:
