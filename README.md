@@ -70,7 +70,7 @@ image: confluentinc/cp-kafka:7.9.0
 
 Make sure that the domain and IP are set up for SSL
 ```
-python3 scripts/config-set-domain.py config/dual.yaml https://DOMAIN EXTERNAL_IP
+python3 scripts/config-set-domain.py config/dual.yaml https://[DOMAIN] [EXTERNAL_IP]
 ```
 
 Set up your domain, prefix and if needed alternate subdomain names in config/domains.json:
@@ -94,7 +94,7 @@ Create certs:
 ./scripts/ssl.sh --create-certs
 ```
 
-close port 80 after certs insalled completely
+close port 80 after certs installed completely
 
 edit docker-compose.yml and comment out the ports under nginx, uncomment the 443 port
 
