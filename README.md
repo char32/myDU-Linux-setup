@@ -52,7 +52,7 @@ sed -i 's/docker-compose/docker compose/g' ./scripts/*
 copy the clean config to a separate file and set up IP. MY_IP would be the LAN IP if you only access the server internally on LAN, else it should be the EXTERNAL (WAN) IP you need the IP TWICE (that is not a typo) or the domain and the IP!!
 ```
 cp ./config/dual.yaml ./config/dual.yaml.ori
-python3 scripts/config-set-domain.py config/dual.yaml http://[DOMAIN OR MY_IP] MY_IP
+python3 scripts/config-set-domain.py config/dual.yaml http://[DOMAIN OR MY_IP] [MY_IP]
 ```
 
 For unsecured external access you need to forward TCP ports 8081, 9210, 9630, 10000 and 10111 on the router and/or on the server OS firewall
